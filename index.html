@@ -322,8 +322,9 @@
       
         
           
-            <h1 id="使用-内的内容不会被渲染。在公式中的“-”两侧分别加上"><a href="#使用-内的内容不会被渲染。在公式中的“-”两侧分别加上" class="headerlink" title="使用 内的内容不会被渲染。在公式中的“_”两侧分别加上"></a>使用
-避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。 内的内容不会被渲染。在公式中的“_”两侧分别加上和</h1><p><strong>缺点：虽然有效，不过改变了Markdown文件的通用性，影响向其他平台的移植。</strong></p>
+            <h1 id="使用-lt-￼2-gt-内的内容不会被渲染。在公式中的“-”两侧分别加上-lt-￼3-gt"><a href="#使用-lt-￼2-gt-内的内容不会被渲染。在公式中的“-”两侧分别加上-lt-￼3-gt" class="headerlink" title="使用`
+避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。`内的内容不会被渲染。在公式中的“_”两侧分别加上`和`"></a>使用<code>{% raw %}{% endraw %}`
+避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。`{% raw %}{% endraw %}</code>内的内容不会被渲染。在公式中的“_”两侧分别加上<code>{% raw %}`和`{% endraw %}</code></h1><p><strong>缺点：虽然有效，不过改变了Markdown文件的通用性，影响向其他平台的移植。</strong></p>
 <h1 id="修改Markdown渲染"><a href="#修改Markdown渲染" class="headerlink" title="修改Markdown渲染"></a>修改Markdown渲染</h1><p>这个方法是我目前使用的，相对来说，通用性较高的一种方式。思路就是修改hexo的渲染源码: nodes_modules/lib/marked/lib/marked.js:</p>
 <p>去掉\的额外转义<br>将em标签对应的符号中，去掉_,因为markdown中有*可以表示斜体，—就去掉了。<br>具体思路参考了使Marked.js与MathJax共存, 打开nodes_modules/marked/lib/marked.js:<br>第一步: 找到下面的代码:</p>
 <figure class="highlight plain"><figcaption><span>/^\\([\\`*&#123;&#125;\[\]()# +\-.!_>])/,```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">改为:</div><div class="line"></div><div class="line">```escape: /^\\([`*&#123;&#125;\[\]()# +\-.!_&gt;])/,</div></pre></td></tr></table></figure>

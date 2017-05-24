@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="使用 避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。 内的内容不会被渲染。在公式中的“_”两侧分别加上和缺点：虽然有效，不过改变了Markdown文件的通用性，影响向其他平台的移植。 修改Markdown渲染这个方法是我目前使用的，相对来说，通用性较高的一种方式。思路就是修改hexo的渲染源码: nodes_modules/lib/marked/lib/marked.j">
+<meta name="description" content="使用{% raw %}{% endraw %}` 避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。`{% raw %}{% endraw %}内的内容不会被渲染。在公式中的“_”两侧分别加上{% raw %}`和`{% endraw %}缺点：虽然有效，不过改变了Markdown文件的通用性，影响向其他平台的移植。 修改Markdown渲染这个方法是我目前使用的，相对来说">
 <meta name="keywords" content="hexo,mathjax">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo中mathjax下划线转义的问题">
 <meta property="og:url" content="http://weinan1122.github.io/2017/05/24/hexo中mathjax下划线转义的问题/index.html">
 <meta property="og:site_name" content="Weinan&#39;s blog">
-<meta property="og:description" content="使用 避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。 内的内容不会被渲染。在公式中的“_”两侧分别加上和缺点：虽然有效，不过改变了Markdown文件的通用性，影响向其他平台的移植。 修改Markdown渲染这个方法是我目前使用的，相对来说，通用性较高的一种方式。思路就是修改hexo的渲染源码: nodes_modules/lib/marked/lib/marked.j">
-<meta property="og:updated_time" content="2017-05-24T07:31:55.706Z">
+<meta property="og:description" content="使用{% raw %}{% endraw %}` 避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。`{% raw %}{% endraw %}内的内容不会被渲染。在公式中的“_”两侧分别加上{% raw %}`和`{% endraw %}缺点：虽然有效，不过改变了Markdown文件的通用性，影响向其他平台的移植。 修改Markdown渲染这个方法是我目前使用的，相对来说">
+<meta property="og:updated_time" content="2017-05-24T07:36:23.049Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo中mathjax下划线转义的问题">
-<meta name="twitter:description" content="使用 避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。 内的内容不会被渲染。在公式中的“_”两侧分别加上和缺点：虽然有效，不过改变了Markdown文件的通用性，影响向其他平台的移植。 修改Markdown渲染这个方法是我目前使用的，相对来说，通用性较高的一种方式。思路就是修改hexo的渲染源码: nodes_modules/lib/marked/lib/marked.j">
+<meta name="twitter:description" content="使用{% raw %}{% endraw %}` 避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。`{% raw %}{% endraw %}内的内容不会被渲染。在公式中的“_”两侧分别加上{% raw %}`和`{% endraw %}缺点：虽然有效，不过改变了Markdown文件的通用性，影响向其他平台的移植。 修改Markdown渲染这个方法是我目前使用的，相对来说">
 
 
 
@@ -318,8 +318,9 @@
       
 
       
-        <h1 id="使用-内的内容不会被渲染。在公式中的“-”两侧分别加上"><a href="#使用-内的内容不会被渲染。在公式中的“-”两侧分别加上" class="headerlink" title="使用 内的内容不会被渲染。在公式中的“_”两侧分别加上"></a>使用
-避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。 内的内容不会被渲染。在公式中的“_”两侧分别加上和</h1><p><strong>缺点：虽然有效，不过改变了Markdown文件的通用性，影响向其他平台的移植。</strong></p>
+        <h1 id="使用-lt-￼2-gt-内的内容不会被渲染。在公式中的“-”两侧分别加上-lt-￼3-gt"><a href="#使用-lt-￼2-gt-内的内容不会被渲染。在公式中的“-”两侧分别加上-lt-￼3-gt" class="headerlink" title="使用`
+避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。`内的内容不会被渲染。在公式中的“_”两侧分别加上`和`"></a>使用<code>{% raw %}{% endraw %}`
+避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。`{% raw %}{% endraw %}</code>内的内容不会被渲染。在公式中的“_”两侧分别加上<code>{% raw %}`和`{% endraw %}</code></h1><p><strong>缺点：虽然有效，不过改变了Markdown文件的通用性，影响向其他平台的移植。</strong></p>
 <h1 id="修改Markdown渲染"><a href="#修改Markdown渲染" class="headerlink" title="修改Markdown渲染"></a>修改Markdown渲染</h1><p>这个方法是我目前使用的，相对来说，通用性较高的一种方式。思路就是修改hexo的渲染源码: nodes_modules/lib/marked/lib/marked.js:</p>
 <p>去掉\的额外转义<br>将em标签对应的符号中，去掉_,因为markdown中有*可以表示斜体，—就去掉了。<br>具体思路参考了使Marked.js与MathJax共存, 打开nodes_modules/marked/lib/marked.js:<br>第一步: 找到下面的代码:</p>
 <figure class="highlight plain"><figcaption><span>/^\\([\\`*&#123;&#125;\[\]()# +\-.!_>])/,```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">改为:</div><div class="line"></div><div class="line">```escape: /^\\([`*&#123;&#125;\[\]()# +\-.!_&gt;])/,</div></pre></td></tr></table></figure>
@@ -500,8 +501,8 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用-内的内容不会被渲染。在公式中的“-”两侧分别加上"><span class="nav-number">1.</span> <span class="nav-text">使用
-避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。 内的内容不会被渲染。在公式中的“_”两侧分别加上和</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改Markdown渲染"><span class="nav-number">2.</span> <span class="nav-text">修改Markdown渲染</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用-lt-￼2-gt-内的内容不会被渲染。在公式中的“-”两侧分别加上-lt-￼3-gt"><span class="nav-number">1.</span> <span class="nav-text">使用{% raw %}{% endraw %}`
+避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。`{% raw %}{% endraw %}内的内容不会被渲染。在公式中的“_”两侧分别加上{% raw %}`和`{% endraw %}</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改Markdown渲染"><span class="nav-number">2.</span> <span class="nav-text">修改Markdown渲染</span></a></li></ol></div>
             
 
           </div>
