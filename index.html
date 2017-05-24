@@ -254,6 +254,127 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://weinan1122.github.io/2017/05/24/hexo中mathjax下划线转义的问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Weinan Feng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Weinan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/24/hexo中mathjax下划线转义的问题/" itemprop="url">hexo中mathjax下划线转义的问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-24T16:30:13+09:00">
+                2017-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="使用-内的内容不会被渲染。在公式中的“-”两侧分别加上"><a href="#使用-内的内容不会被渲染。在公式中的“-”两侧分别加上" class="headerlink" title="使用 内的内容不会被渲染。在公式中的“_”两侧分别加上"></a>使用
+避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。 内的内容不会被渲染。在公式中的“_”两侧分别加上和</h1><p><strong>缺点：虽然有效，不过改变了Markdown文件的通用性，影响向其他平台的移植。</strong></p>
+<h1 id="修改Markdown渲染"><a href="#修改Markdown渲染" class="headerlink" title="修改Markdown渲染"></a>修改Markdown渲染</h1><p>这个方法是我目前使用的，相对来说，通用性较高的一种方式。思路就是修改hexo的渲染源码: nodes_modules/lib/marked/lib/marked.js:</p>
+<p>去掉\的额外转义<br>将em标签对应的符号中，去掉_,因为markdown中有*可以表示斜体，—就去掉了。<br>具体思路参考了使Marked.js与MathJax共存, 打开nodes_modules/marked/lib/marked.js:<br>第一步: 找到下面的代码:</p>
+<figure class="highlight plain"><figcaption><span>/^\\([\\`*&#123;&#125;\[\]()# +\-.!_>])/,```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">改为:</div><div class="line"></div><div class="line">```escape: /^\\([`*&#123;&#125;\[\]()# +\-.!_&gt;])/,</div></pre></td></tr></table></figure>
+<p>这样就会去掉\的转义了。</p>
+<p>第二步: 找到em的符号:<br><figure class="highlight plain"><figcaption><span>/^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">改为:</div></pre></td></tr></table></figure></p>
+<p>em:/^*((?:**|[\s\S])+?)*(?!*)/,<br>```</p>
+<p>去掉_的斜体含义,这样就解决了。为什么说通用性很高，因为我们没有修改文章的内容，可以放到别的引擎下也会顺利渲染。</p>
+<p>缺点：是Markdown通用性降低。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://weinan1122.github.io/2017/05/24/探索在PPT中插入HTML三维散点图/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1009,7 +1130,7 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</code>但
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
