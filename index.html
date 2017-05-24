@@ -254,124 +254,6 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://weinan1122.github.io/2017/05/24/探索在PPT中插入HTML三维散点图/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Weinan Feng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Weinan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/24/探索在PPT中插入HTML三维散点图/" itemprop="url">探索在PPT中插入HTML三维散点图</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-24T16:08:51+09:00">
-                2017-05-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>今天在家试验了在PPT中插入网页，并且用于表示3D散点图，现在进行记录。</p>
-<h4 id="PowerPoint的准备工作"><a href="#PowerPoint的准备工作" class="headerlink" title="PowerPoint的准备工作"></a>PowerPoint的准备工作</h4><p>首先应开启PPT的“开发工具”功能，然后将浏览器控件拖拽到页面上，但是会遇到无法加载ActiveX的提示<br><img src="http://note.youdao.com/yws/public/resource/c1b911fc6b494b442aea0396799759b6/2045576B3E94474687261CF09BFD826A" alt=""><br><img src="http://note.youdao.com/yws/public/resource/c1b911fc6b494b442aea0396799759b6/FFB398BFBB5B4B2EAD79B30414D5ACCC" alt=""><br><img src="http://note.youdao.com/yws/public/resource/c1b911fc6b494b442aea0396799759b6/4BCD53085EB74D4A960DB7940A25C0CA" alt=""><br><img src="http://note.youdao.com/yws/public/resource/c1b911fc6b494b442aea0396799759b6/12CDEB38C2E04672A59CCF529DB808F3" alt=""><br>解决办法：<br> 搜索注册表HKEY_LOCAL_MACHINE中的{8856F961-340A-11D0-A96B-00C04FD705A2}，将Compatibility Flag的改十六进制400为0即可。（注意在这个值为400的flag前还会搜索到一个值为21的，不要改错了）<br> 之后就可以插入浏览器了。<a href="http://jingyan.baidu.com/article/20b68a88598406796cec629a.html" target="_blank" rel="external">参考</a></p>
-<h4 id="画图工具的准备"><a href="#画图工具的准备" class="headerlink" title="画图工具的准备"></a>画图工具的准备</h4><p>HTML的画图工具有很多，但是能画3D散点图的并不多，这里我选用<a href="http://canvasxpress.org/html/index.html" target="_blank" rel="external">canvas xpress</a>，它有着丰富的图表功能，其中<a href="http://canvasxpress.org/html/index.html" target="_blank" rel="external">Scatter3D</a>是满足我们需要的3D散点图。<br>获得源码的方法是向其登陆用户名和邮件，它会把源码的下载地址发给我们，这里使用已经获得的<a href="http://canvasxpress.org/user/18571731175961.zip" target="_blank" rel="external">下载地址</a>，不知以后是否会失效。下载解压后会得到’.js’和’.css’代码，编写HTML时将这两个文件link进去就可以了。</p>
-<p>这里建议将canvasXpress官网上<a href="http://canvasxpress.org/html/index.html" target="_blank" rel="external">Scatter3D</a>的源码直接保存下载，注意是保存完整的网页，然后对其进行求改比较省力。下载到的HTML文件中大多数的代码是没用的，我们只保留有用的几句，如下。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- CanvasXpress --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./Scatter3D_files/canvasXpress.css"</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"./Scatter3D_files/canvasXpress.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- &lt;link type="text/css" rel="stylesheet" href="./Scatter3D_files/css"&gt; --&gt;</span></div><div class="line"><span class="comment">&lt;!-- Page Script --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"./Scatter3D_files/scatter3d-1.json"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">"initPage();"</span> &gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"scatter3d1"</span> <span class="attr">width</span>=<span class="string">"600"</span> <span class="attr">height</span>=<span class="string">"600"</span> &gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>其中”scatter3d-1.json”是数据来源，其内容的具体结构还需在官网学习，总之，实验数据必须要以正确的方式写到这个文件里才会显示出来。</p>
-<h4 id="在PowerPoint的浏览器中访问HTML"><a href="#在PowerPoint的浏览器中访问HTML" class="headerlink" title="在PowerPoint的浏览器中访问HTML"></a>在PowerPoint的浏览器中访问HTML</h4><p>在PowerPoint的浏览器中访问HTML需要在PPT中添加宏，使用VBA。<br>双击页面中刚刚画好的浏览器，会弹出VBA工程对话框，其中显示这样一个函数，”WebBrowser1_StatusTextChange()”，这个函数没有用，删掉即可。<br>我们需要加入这样的函数，<a href="http://oicu.cc.blog.163.com/blog/static/123039471201182011920382/" target="_blank" rel="external">参考</a>，<br><figure class="highlight vb"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Sub</span> OnSlideShowPageChange()</div><div class="line"><span class="comment">' 自定义代码</span></div><div class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></div></pre></td></tr></table></figure></p>
-<p>这个函数实现的在本页PPT播放时执行的动作。其中自定义代码区可以写<code>WebBrowser1.Navigate (&quot;需要的网址&quot;)</code>。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://weinan1122.github.io/2017/05/24/test-for-utf-8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1009,7 +891,7 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</code>但
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1022,7 +904,7 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</code>但
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
