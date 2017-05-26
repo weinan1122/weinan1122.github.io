@@ -259,7 +259,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Weinan Feng">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://scontent.xx.fbcdn.net/v/t1.0-9/18740742_1856104097972596_7232442169177972267_n.jpg?oh=ca3161a0b022b480ca3bb6597f5e2ae1&oe=59EA19EF">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -322,21 +322,17 @@
       
         
           
-            <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>next是Hexo的一个博客主题，这个主题 ，首页显示的文章列表，每一遍都是全文，不方便概览。</p>
-<h1 id="希望达到的效果"><a href="#希望达到的效果" class="headerlink" title="希望达到的效果"></a>希望达到的效果</h1><p>首页显示文章列表，列表里的每一篇文章只显示预览，不显示全文。</p>
-<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>百度了好久，折腾了半天，改了各种参数，算是撞破了头，最后试出来了。<br>哎，搞移动端的，不太懂网页的这些东西，不说废话了，直接上解决方法：</p>
-<ul>
-<li>进入hexo博客项目的themes/next目录</li>
-<li>用文本编辑器打开_config.yml文件</li>
-<li><p>搜索”auto_excerpt”,找到如下部分：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Automatically Excerpt. Not recommand.</div><div class="line"># Please use <span class="comment">&lt;!-- more --&gt;</span> in the post to control excerpt accurately.</div><div class="line">auto_excerpt:</div><div class="line">enable: false</div><div class="line">length: 150</div></pre></td></tr></table></figure>
-</li>
-<li><p>把enable改为对应的false改为true，然后<code>hexo d -g</code>，再进主页，问题就解决了！</p>
-</li>
-</ul>
-<p><a href="http://www.jianshu.com/p/393d067dba8d" target="_blank" rel="external">原文链接</a></p>
-
-          
+          问题next是Hexo的一个博客主题，这个主题 ，首页显示的文章列表，每一遍都是全文，不方便概览。
+希望达到的效果首页显示文章列表，列表里的每一篇文章只显示预览，不显示全文。
+解决办法百度了好久，折腾了半天，改了各种参数，算是撞破了头，最后试出来了。哎，搞移动端的，不太懂网页的这些东西，不说废话了，
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/26/Hexo之next主题设置首页不显示全文-只显示预览/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -383,7 +379,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Weinan Feng">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://scontent.xx.fbcdn.net/v/t1.0-9/18740742_1856104097972596_7232442169177972267_n.jpg?oh=ca3161a0b022b480ca3bb6597f5e2ae1&oe=59EA19EF">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -446,103 +442,15 @@
       
         
           
-            <h1 id="Contributing-to-MathJax"><a href="#Contributing-to-MathJax" class="headerlink" title="Contributing to MathJax"></a>Contributing to MathJax</h1><p>You are interested in giving us a hand? That’s awesome! We’ve put together some brief guidelines that should help you get started quickly and easily.</p>
-<p>There are lots and lots of ways to get involved, this document covers:</p>
-<ul>
-<li><a href="#reporting-an-issue">reporting an issue</a><ul>
-<li><a href="#bug-reports">bug reports</a></li>
-<li><a href="#feature-requests">feature requests</a></li>
-<li><a href="#change-requests">change requests</a></li>
-</ul>
-</li>
-<li><a href="#working-on-mathjax-core">working on MathJax core</a><ul>
-<li><a href="#key-branches--tags">key branches and tags</a></li>
-<li><a href="#submitting-pull-requests">submitting pull requests</a></li>
-<li><a href="#testing-and-quality-assurance">testing and quality assurance</a></li>
-<li><a href="#writing-documentation">writing documentation</a></li>
-<li><a href="#translation">translation</a></li>
-</ul>
-</li>
-<li><a href="#conduct">Conduct</a></li>
-</ul>
-<h2 id="Reporting-An-Issue"><a href="#Reporting-An-Issue" class="headerlink" title="Reporting An Issue"></a>Reporting An Issue</h2><p>If you’re about to raise an issue because you think you’ve found a<br>problem with MathJax, or you’d like to make a request for a new<br>feature in the codebase, or any other reason… please read this first.</p>
-<p>The GitHub issue tracker is the preferred channel for <a href="#bug-reports">bug reports</a>,<br><a href="#feature-requests">feature requests</a>, <a href="#change-requests">change requests</a> and <a href="#submitting-pull-requests">submitting pull<br>requests</a>, but please respect the following restrictions:</p>
-<ul>
-<li><p>Please <strong>search for existing issues</strong>. Help us keep duplicate issues<br>to a minimum by checking to see if someone has already reported your<br>problem or requested your idea.</p>
-</li>
-<li><p>Please <strong>do not</strong> use the issue tracker for personal support<br>requests (use <a href="https://groups.google.com/forum/#!forum/mathjax-users" target="_blank" rel="external">the MathJax User Group</a>).</p>
-</li>
-<li><p>Please <strong>be civil</strong>. Keep the discussion on topic and respect the<br>opinions of others. See also our <a href="#conduct">Conduct Guidelines</a></p>
-</li>
-</ul>
-<h3 id="Bug-Reports"><a href="#Bug-Reports" class="headerlink" title="Bug Reports"></a>Bug Reports</h3><p>A bug is a _demonstrable problem_ that is caused by the code in the repository.<br>Good bug reports are extremely helpful - thank you!</p>
-<p>Guidelines for bug reports:</p>
-<ol>
-<li><p><strong>Use the GitHub issue search</strong> &mdash; check if the issue has already been<br>reported.</p>
-</li>
-<li><p><strong>Check if the issue has been fixed</strong> &mdash; look for <a href="https://github.com/MathJax/MathJax/issues?&amp;page=1&amp;state=closed" target="_blank" rel="external">closed issues in the<br>current milestone</a> or try to reproduce it<br>using the latest <code>develop</code> branch. Please note that we only pack MathJax for releases, so on the <code>develop</code> branch you have to use <code>/unpacked/MathJax.js</code> etc. to test.</p>
-</li>
-<li><p><strong>Share a live sample of the problem</strong> &mdash; without a live page it is usually impossible to debug problems; see also the Bug Report Template below.</p>
-</li>
-<li><p><strong>Isolate the problem</strong> &mdash; a live sample is a starting point but if you want to speed things up create a <a href="http://css-tricks.com/6263-reduced-test-cases/" target="_blank" rel="external">reduced test<br>case</a>. Be specific about your setup (browser, OS versions etc). Use services like <a href="http://jsbin.com" target="_blank" rel="external">jsbin</a>, <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>, <a href="http://jsfiddle.com" target="_blank" rel="external">JSfiddle</a> to make collaboration on minimal test cases easier for everyone. Use the unpacked copy of MathJax (<code>[...]/unpacked/MathJax.js</code> etc.) for better debugging.</p>
-</li>
-<li><p><strong>Include a screenshot/cast as a last resort</strong> &mdash; Is your issue about a layout<br>or design feature / bug but hard to reproduce or isolate? Then please provide a screenshot or screencast. Tools like <a href="http://www.cockos.com/licecap/" target="_blank" rel="external">LICEcap</a> or <a href="http://www.saucelabs.com" target="_blank" rel="external">SauceLabs</a> allow you to quickly and easily record a screencasts. Make it an animated gif, embed it directly into your GitHub issue – kapow!</p>
-</li>
-<li><p>Use the Bug Report template below or <a href="https://github.com/MathJax/MathJax/issues/new?title=Bug%3A&amp;body=%23%23%23%20Issue%20Summary%0A%0A%23%23%23%20Steps%20to%20Reproduce%0A%0A1.%20This%20is%20the%20first%20step%0A%0AThis%20is%20a%20bug%20because...%0A%0A%23%23%23%20Technical%20details%0A%0A*%20MathJax%20Version%3A%20master%20-%20latest%20commit%3A%20%20INSERT%20COMMIT%20REF%0A*%20Client%20OS%3A%20%0A*%20Browser%3A%20%0A*%20" target="_blank" rel="external">click this<br>link</a><br>to start creating a bug report with the template automatically.</p>
-</li>
-</ol>
-<p>A good bug report shouldn’t leave others needing to chase you up for<br>more information. Be sure to include the details of your environment.</p>
-<p>Here is a <a href="https://github.com/mathjax/MathJax/issues/820" target="_blank" rel="external">real example</a></p>
-<p>Template Example (<a href="https://github.com/MathJax/MathJax/issues/new?title=Bug%3A&amp;body=%23%23%23%20Issue%20Summary%0A%0A%23%23%23%20Steps%20to%20Reproduce%0A%0A1.%20This%20is%20the%20first%20step%0A%0AThis%20is%20a%20bug%20because...%0A%0A%23%23%23%20Technical%20details%0A%0A*%20MathJax%20Version%3A%20master%20-%20latest%20commit%3A%20%20INSERT%20COMMIT%20REF%0A*%20Client%20OS%3A%20%0A*%20Browser%3A%20%0A*%20" target="_blank" rel="external">click to use</a>):<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">Short and descriptive example bug report title</div><div class="line"></div><div class="line">### Issue Summary</div><div class="line"></div><div class="line">A summary of the issue and the browser/OS environment in which it occurs. If</div><div class="line">suitable, include the steps required to reproduce the bug.</div><div class="line"></div><div class="line">### Steps to Reproduce</div><div class="line"></div><div class="line">1. This is the first step</div><div class="line">2. This is the second step</div><div class="line">3. Further steps, etc.</div><div class="line"></div><div class="line">Any other information you want to share that is relevant to the issue</div><div class="line">being reported. Especially, why do you consider this to be a bug? What</div><div class="line">do you expect to happen instead?</div><div class="line"></div><div class="line">### Technical details:</div><div class="line"></div><div class="line">* MathJax Version: 2.3 (latest commit: f3aaf3a2a3e964df2770dc4aaaa9c87ce5f47e2c)</div><div class="line">* Client OS: Mac OS X 10.8.4</div><div class="line">* Browser: Chrome 29.0.1547.57</div></pre></td></tr></table></figure></p>
-<h3 id="Feature-Requests"><a href="#Feature-Requests" class="headerlink" title="Feature Requests"></a>Feature Requests</h3><p>Feature requests are welcome. Before you submit one be sure to have:</p>
-<ol>
-<li>Read the<br><a href="https://github.com/mathjax/MathJax/wiki/Mathjax-roadmap" target="_blank" rel="external">Roadmaps</a>,<br><strong>use the GitHub search</strong> and check the feature hasn’t already been<br>requested.</li>
-<li>Take a moment to think about whether your idea fits with the scope<br>and aims of the project, or if it might better fit being a <a href="https://github.com/mathjax/MathJax-third-party-extensions" target="_blank" rel="external">custom<br>extension</a>.</li>
-<li>Remember, it’s up to <em>you</em> to make a strong case to convince the<br>project’s leaders of the merits of this feature. Please provide as<br>much detail and context as possible, this means explaining the use<br>case and why it is likely to be common.</li>
-<li>Clearly indicate whether this is a feature request for MathJax<br>core, input &amp; output jax, or extensions.</li>
-</ol>
-<h3 id="Change-Requests"><a href="#Change-Requests" class="headerlink" title="Change Requests"></a>Change Requests</h3><p>Change requests cover both architectural and functional changes to how<br>MathJax works. If you have an idea for a new or different dependency,<br>a refactor, or an improvement to a feature, etc - please be sure to:</p>
-<ol>
-<li><strong>Use the GitHub search</strong> and check someone else didn’t get there first</li>
-<li>Take a moment to think about the best way to make a case for, and<br>explain what you’re thinking. Are you sure this shouldn’t really be<br>a <a href="#bug-reports">bug report</a> or a <a href="#feature-requests">feature<br>request</a>?  Is it really one idea or is it many?<br>What’s the context? What problem are you solving? Why is what you<br>are suggesting better than what’s already there? Does it fit with<br>the Roadmap?</li>
-</ol>
-<h2 id="Working-on-MathJax-core"><a href="#Working-on-MathJax-core" class="headerlink" title="Working on MathJax core"></a>Working on MathJax core</h2><p>You want to contribute code? Fantastic! Let’s get you started.</p>
-<h3 id="Key-Branches-amp-Tags"><a href="#Key-Branches-amp-Tags" class="headerlink" title="Key Branches &amp; Tags"></a>Key Branches &amp; Tags</h3><p>To get it out of the way:</p>
-<ul>
-<li><strong><a href="https://github.com/MathJax/MathJax/tree/develop" target="_blank" rel="external">develop</a></strong> is<br>the development branch. All work on the next release happens here so<br>you should generally branch off <code>develop</code>. Do <strong>NOT</strong> use this branch<br>for a production site. </li>
-<li><strong><a href="https://github.com/MathJax/MathJax" target="_blank" rel="external">master</a></strong> contains the latest<br>release of MathJax. This branch may be used in production. Do<br><strong>NOT</strong> use this branch to work on MathJax’s source.</li>
-</ul>
-<h3 id="Submitting-Pull-Requests"><a href="#Submitting-Pull-Requests" class="headerlink" title="Submitting Pull Requests"></a>Submitting Pull Requests</h3><p>Pull requests are awesome. If you’re looking to raise a PR for<br>something which doesn’t have an open issue, please think carefully<br>about <a href="#reporting-an-issue">raising an issue</a> which your PR can close,<br>especially if you’re fixing a bug. This makes it more likely that<br>there will be enough information available for your PR to be properly<br>tested and merged.</p>
-<h5 id="Need-Help"><a href="#Need-Help" class="headerlink" title="Need Help?"></a>Need Help?</h5><p>If you’re not completely clear on how to submit / update / <em>do</em> Pull<br>Requests, please check out our <a href="https://github.com/mathjax/MathJax/wiki/Source-control-policies" target="_blank" rel="external">source control<br>policies</a>. For<br>more insights, chech the excellent in depth <a href="https://github.com/TryGhost/Ghost/wiki/Git-Workflow" target="_blank" rel="external">Git Workflow<br>guide</a> from<br>Ghost, in particular</p>
-<ul>
-<li><a href="https://github.com/TryGhost/Ghost/wiki/Git-workflow#commit-messages" target="_blank" rel="external">Ghost Workflow guide: commit messages</a></li>
-</ul>
-<h3 id="Testing-and-Quality-Assurance"><a href="#Testing-and-Quality-Assurance" class="headerlink" title="Testing and Quality Assurance"></a>Testing and Quality Assurance</h3><p>Never underestimate just how useful quality assurance is. If you’re<br>looking to get involved with the code base and don’t know where to<br>start, checking out and testing a pull request is one of the most<br>useful things you could do.</p>
-<p>If you want to get involved with testing MathJax, there is a set of QA<br>Documentation <a href="https://github.com/MathJax/MathJax-test" target="_blank" rel="external">in our testing<br>framework</a>.</p>
-<p>Essentially though, <a href="#working-on-mathJax-core">check out the latest develop<br>branch</a>, take it for a spin, and if you find<br>anything odd, please follow the <a href="#bug-reports">bug report guidelines</a><br>and let us know!</p>
-<h4 id="Checking-out-a-Pull-Request"><a href="#Checking-out-a-Pull-Request" class="headerlink" title="Checking out a Pull Request"></a>Checking out a Pull Request</h4><p>These are some <a href="https://gist.github.com/piscisaureus/3342247" target="_blank" rel="external">excellent<br>instructions</a> on<br>configuring your GitHub repository to allow you to checkout pull<br>requests in the same way as branches:<br><a href="https://gist.github.com/piscisaureus/3342247" target="_blank" rel="external">https://gist.github.com/piscisaureus/3342247</a>.</p>
-<h3 id="Writing-documentation"><a href="#Writing-documentation" class="headerlink" title="Writing documentation"></a>Writing documentation</h3><p>MathJax’s main documentation can be found at <a href="http://docs.mathjax.org" target="_blank" rel="external">docs.mathjax.org</a>.<br>The source of the docs is hosted in the<br><a href="http://github.com/mathjax/mathjax-docs" target="_blank" rel="external">mathjax/mathjax-docs</a> repo here on GitHub.</p>
-<p>The documentation is generated using <a href="http://sphinx-doc.org/" target="_blank" rel="external">Sphinx-doc</a> and hosted on<br><a href="http://readthedocs.org" target="_blank" rel="external">Read the docs</a>.<br>You can clone the repo and submit pull requests following the<br><a href="#submitting-pull-requests">pull-request</a> guidelines.</p>
-<h3 id="Translation"><a href="#Translation" class="headerlink" title="Translation"></a>Translation</h3><p>If you wish to add or update translations of MathJax, please do it on<br><a href="https://translatewiki.net/w/i.php?title=Special:Translate&amp;group=out-mathjax-0-all" target="_blank" rel="external">TranslateWiki.net</a><br>(and while you’re there you can help other open source projects,<br>too, because you’re awesome!).</p>
-<p>For bug reports and other questions that don’t fit on<br>TranslateWiki.net, head over to the<br><a href="https://github.com/mathjax/MathJax-i18n" target="_blank" rel="external">mathjax/mathjax-i18n</a><br>repository.</p>
-<h2 id="Conduct"><a href="#Conduct" class="headerlink" title="Conduct"></a>Conduct</h2><p>We are committed to providing a friendly, safe and welcoming environment for<br>all, regardless of gender, sexual orientation, disability, ethnicity, religion,<br>or similar personal characteristic.</p>
-<p>Please be kind and courteous. There’s no need to be mean or rude.<br>Respect that people have differences of opinion and that every design or<br>implementation choice carries a trade-off and numerous costs. There is seldom<br>a right answer, merely an optimal answer given a set of values and<br>circumstances.</p>
-<p>Please keep unstructured critique to a minimum. If you have solid ideas you<br>want to experiment with, make a fork and see how it works.</p>
-<p>We will exclude you from interaction if you insult, demean or harass anyone.<br>That is not welcome behaviour. We interpret the term “harassment” as<br>including the definition in the<br><a href="http://citizencodeofconduct.org/" target="_blank" rel="external">Citizen Code of Conduct</a>;<br>if you have any lack of clarity about what might be included in that concept,<br>please read their definition. In particular, we don’t tolerate behavior that<br>excludes people in socially marginalized groups.</p>
-<p>Private harassment is also unacceptable. No matter who you are, if you feel<br>you have been or are being harassed or made uncomfortable by a community<br>member, please contact one of the channel ops or any of the<br><a href="https://github.com/MathJax/MathJax" target="_blank" rel="external">MathJax</a> core team<br>immediately. Whether you’re a regular contributor or a newcomer, we care about<br>making this community a safe place for you and we’ve got your back.</p>
-<p>Likewise any spamming, trolling, flaming, baiting or other attention-stealing<br>behaviour is not welcome.</p>
-<p>We also suggest to read <a href="http://blog.discourse.org/2013/03/the-universal-rules-of-civilized-discourse/" target="_blank" rel="external">discourse’s<br>rules</a></p>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
-<li>We heavily borrowed from Mozilla and Ghost – thank you!<ul>
-<li><a href="https://github.com/TryGhost/Ghost/blob/master/CONTRIBUTING.md" target="_blank" rel="external">https://github.com/TryGhost/Ghost/blob/master/CONTRIBUTING.md</a></li>
-<li><a href="https://github.com/mozilla/rust/wiki/Note-development-policy" target="_blank" rel="external">https://github.com/mozilla/rust/wiki/Note-development-policy</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/jden/CONTRIBUTING.md/blob/master/CONTRIBUTING.md" target="_blank" rel="external">https://github.com/jden/CONTRIBUTING.md/blob/master/CONTRIBUTING.md</a></li>
-<li><a href="http://blog.discourse.org/2013/03/the-universal-rules-of-civilized-discourse/" target="_blank" rel="external">http://blog.discourse.org/2013/03/the-universal-rules-of-civilized-discourse/</a></li>
-</ul>
-
-          
+          Contributing to MathJaxYou are interested in giving us a hand? That’s awesome! We’ve put together some brief guidelines that should help you get start
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/24/Contributing-to-MathJax/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -589,7 +497,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Weinan Feng">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://scontent.xx.fbcdn.net/v/t1.0-9/18740742_1856104097972596_7232442169177972267_n.jpg?oh=ca3161a0b022b480ca3bb6597f5e2ae1&oe=59EA19EF">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -652,19 +560,16 @@
       
         
           
-            <h1 id="使用-lt-￼2-gt-内的内容不会被渲染。在公式中的“-”两侧分别加上-lt-￼3-gt"><a href="#使用-lt-￼2-gt-内的内容不会被渲染。在公式中的“-”两侧分别加上-lt-￼3-gt" class="headerlink" title="使用`
-避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。`内的内容不会被渲染。在公式中的“_”两侧分别加上`和`"></a>使用<code>{% raw %}{% endraw %}`
-避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。`{% raw %}{% endraw %}</code>内的内容不会被渲染。在公式中的“_”两侧分别加上<code>{% raw %}`和`{% endraw %}</code></h1><p><strong>缺点：虽然有效，不过改变了Markdown文件的通用性，影响向其他平台的移植。</strong></p>
-<h1 id="修改Markdown渲染"><a href="#修改Markdown渲染" class="headerlink" title="修改Markdown渲染"></a>修改Markdown渲染</h1><p>这个方法是我目前使用的，相对来说，通用性较高的一种方式。思路就是修改hexo的渲染源码: nodes_modules/lib/marked/lib/marked.js:</p>
-<p>去掉\的额外转义<br>将em标签对应的符号中，去掉_,因为markdown中有*可以表示斜体，—就去掉了。<br>具体思路参考了使Marked.js与MathJax共存, 打开nodes_modules/marked/lib/marked.js:<br>第一步: 找到下面的代码:</p>
-<figure class="highlight plain"><figcaption><span>/^\\([\\`*&#123;&#125;\[\]()# +\-.!_>])/,```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">改为:</div><div class="line"></div><div class="line">```escape: /^\\([`*&#123;&#125;\[\]()# +\-.!_&gt;])/,</div></pre></td></tr></table></figure>
-<p>这样就会去掉\的转义了。</p>
-<p>第二步: 找到em的符号:<br><figure class="highlight plain"><figcaption><span>/^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">改为:</div></pre></td></tr></table></figure></p>
-<p>em:/^*((?:**|[\s\S])+?)*(?!*)/,<br>```</p>
-<p>去掉_的斜体含义,这样就解决了。为什么说通用性很高，因为我们没有修改文章的内容，可以放到别的引擎下也会顺利渲染。</p>
-<p>缺点：是Markdown通用性降低。</p>
-
-          
+          使用{% raw %}{% endraw %}`
+避免下划线反斜杠的话，可以试试 Hexo 自带的 Tag Plugins。`{% raw %}{% endraw %}内的内容不会被渲染。在公式中的“_”两侧分别加上{% raw %}`和`{% endraw %}缺点：虽然有效，不过改变了Markd
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/24/hexo中mathjax下划线转义的问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -711,7 +616,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Weinan Feng">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://scontent.xx.fbcdn.net/v/t1.0-9/18740742_1856104097972596_7232442169177972267_n.jpg?oh=ca3161a0b022b480ca3bb6597f5e2ae1&oe=59EA19EF">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -774,15 +679,16 @@
       
         
           
-            <p>今天在家试验了在PPT中插入网页，并且用于表示3D散点图，现在进行记录。</p>
-<h4 id="PowerPoint的准备工作"><a href="#PowerPoint的准备工作" class="headerlink" title="PowerPoint的准备工作"></a>PowerPoint的准备工作</h4><p>首先应开启PPT的“开发工具”功能，然后将浏览器控件拖拽到页面上，但是会遇到无法加载ActiveX的提示<br><img src="http://note.youdao.com/yws/public/resource/c1b911fc6b494b442aea0396799759b6/2045576B3E94474687261CF09BFD826A" alt=""><br><img src="http://note.youdao.com/yws/public/resource/c1b911fc6b494b442aea0396799759b6/FFB398BFBB5B4B2EAD79B30414D5ACCC" alt=""><br><img src="http://note.youdao.com/yws/public/resource/c1b911fc6b494b442aea0396799759b6/4BCD53085EB74D4A960DB7940A25C0CA" alt=""><br><img src="http://note.youdao.com/yws/public/resource/c1b911fc6b494b442aea0396799759b6/12CDEB38C2E04672A59CCF529DB808F3" alt=""><br>解决办法：<br> 搜索注册表HKEY_LOCAL_MACHINE中的{8856F961-340A-11D0-A96B-00C04FD705A2}，将Compatibility Flag的改十六进制400为0即可。（注意在这个值为400的flag前还会搜索到一个值为21的，不要改错了）<br> 之后就可以插入浏览器了。<a href="http://jingyan.baidu.com/article/20b68a88598406796cec629a.html" target="_blank" rel="external">参考</a></p>
-<h4 id="画图工具的准备"><a href="#画图工具的准备" class="headerlink" title="画图工具的准备"></a>画图工具的准备</h4><p>HTML的画图工具有很多，但是能画3D散点图的并不多，这里我选用<a href="http://canvasxpress.org/html/index.html" target="_blank" rel="external">canvas xpress</a>，它有着丰富的图表功能，其中<a href="http://canvasxpress.org/html/index.html" target="_blank" rel="external">Scatter3D</a>是满足我们需要的3D散点图。<br>获得源码的方法是向其登陆用户名和邮件，它会把源码的下载地址发给我们，这里使用已经获得的<a href="http://canvasxpress.org/user/18571731175961.zip" target="_blank" rel="external">下载地址</a>，不知以后是否会失效。下载解压后会得到’.js’和’.css’代码，编写HTML时将这两个文件link进去就可以了。</p>
-<p>这里建议将canvasXpress官网上<a href="http://canvasxpress.org/html/index.html" target="_blank" rel="external">Scatter3D</a>的源码直接保存下载，注意是保存完整的网页，然后对其进行求改比较省力。下载到的HTML文件中大多数的代码是没用的，我们只保留有用的几句，如下。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- CanvasXpress --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./Scatter3D_files/canvasXpress.css"</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"./Scatter3D_files/canvasXpress.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- &lt;link type="text/css" rel="stylesheet" href="./Scatter3D_files/css"&gt; --&gt;</span></div><div class="line"><span class="comment">&lt;!-- Page Script --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"./Scatter3D_files/scatter3d-1.json"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">"initPage();"</span> &gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"scatter3d1"</span> <span class="attr">width</span>=<span class="string">"600"</span> <span class="attr">height</span>=<span class="string">"600"</span> &gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>其中”scatter3d-1.json”是数据来源，其内容的具体结构还需在官网学习，总之，实验数据必须要以正确的方式写到这个文件里才会显示出来。</p>
-<h4 id="在PowerPoint的浏览器中访问HTML"><a href="#在PowerPoint的浏览器中访问HTML" class="headerlink" title="在PowerPoint的浏览器中访问HTML"></a>在PowerPoint的浏览器中访问HTML</h4><p>在PowerPoint的浏览器中访问HTML需要在PPT中添加宏，使用VBA。<br>双击页面中刚刚画好的浏览器，会弹出VBA工程对话框，其中显示这样一个函数，”WebBrowser1_StatusTextChange()”，这个函数没有用，删掉即可。<br>我们需要加入这样的函数，<a href="http://oicu.cc.blog.163.com/blog/static/123039471201182011920382/" target="_blank" rel="external">参考</a>，<br><figure class="highlight vb"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Sub</span> OnSlideShowPageChange()</div><div class="line"><span class="comment">' 自定义代码</span></div><div class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></div></pre></td></tr></table></figure></p>
-<p>这个函数实现的在本页PPT播放时执行的动作。其中自定义代码区可以写<code>WebBrowser1.Navigate (&quot;需要的网址&quot;)</code>。</p>
-
-          
+          今天在家试验了在PPT中插入网页，并且用于表示3D散点图，现在进行记录。
+PowerPoint的准备工作首先应开启PPT的“开发工具”功能，然后将浏览器控件拖拽到页面上，但是会遇到无法加载ActiveX的提示解决办法： 搜索注册表HKEY_LOCAL_MACHINE中的{8856F961-340A-
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/24/探索在PPT中插入HTML三维散点图/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -829,7 +735,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Weinan Feng">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://scontent.xx.fbcdn.net/v/t1.0-9/18740742_1856104097972596_7232442169177972267_n.jpg?oh=ca3161a0b022b480ca3bb6597f5e2ae1&oe=59EA19EF">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -892,9 +798,16 @@
       
         
           
-            <p>This blog is using to test code format.<br>这篇博客用于检测编码格式。<br>このブログはコーディング形式をテストする．</p>
+          This blog is using to test code format.这篇博客用于检测编码格式。このブログはコーディング形式をテストする．
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/24/test-for-utf-8/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -941,7 +854,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Weinan Feng">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://scontent.xx.fbcdn.net/v/t1.0-9/18740742_1856104097972596_7232442169177972267_n.jpg?oh=ca3161a0b022b480ca3bb6597f5e2ae1&oe=59EA19EF">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1004,21 +917,15 @@
       
         
           
-            <h1 id="How-to-use-RSoft"><a href="#How-to-use-RSoft" class="headerlink" title="How to use RSoft"></a>How to use RSoft</h1><p>If you want to try some simulations of waveguides, special structure fibers or some other optical components, the <strong>RSoft</strong> may be one of the tools that you can’t miss.</p>
-<p>The RSfoft is a combine of several subsoftwares such as RSoft CAD environment, <strong>FullWAVE</strong>, <strong>BeamPROP</strong>, DiffractMOD, ModePROP, GratingMOD, BandSOLVE, in which the bolded ones are perhaps the mostly used in our labratory.</p>
-<hr>
-<h3 id="Official-Documents"><a href="#Official-Documents" class="headerlink" title="Official Documents"></a>Official Documents</h3><p>Thera are several useful official documents, which you can download from the following links or copy from the server ++in our student room++ directly.</p>
-<ul>
-<li>[rsoftcad.pdf][1] (telling you how to draw components and set parameters), and Japanese version <a href="\\133.9.48.100\Server Files\students\Feng Weinan\Rsoft Documents\rsoft_cad_manual_v90_jpn.pdf">rsoft_cad_manual_v90_jpn.pdf</a>.</li>
-<li><a href="\\133.9.48.100\Server Files\students\Feng Weinan\Rsoft Documents\RSoft User Guide\beamprop.chm">beamprop.chm</a></li>
-<li><a href="\\133.9.48.100\Server Files\students\Feng Weinan\Rsoft Documents\RSoft User Guide\fullwave.chm">fullwave.chm</a></li>
-<li>Other documents can be accessed from <a href="file://133.9.48.100/Server%20Files/students/Feng%20Weinan/Rsoft%20Documents" target="_blank" rel="external"><code>\\133.9.48.100\Server Files\students\Feng Weinan\Rsoft Documents</code></a><br>[baidu][1]</li>
-</ul>
-<p>If be asked about the username and password, please fill in both of them as “<strong><em>server</em></strong>“.</p>
-<hr>
-<p>[1] : <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a><br>[2] : \\133.9.48.100\Server Files\students\Feng Weinan\Rsoft Documents\rsoftcad.pdf</p>
-
-          
+          How to use RSoftIf you want to try some simulations of waveguides, special structure fibers or some other optical components, the RSoft may be one of 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/24/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1065,7 +972,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Weinan Feng">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://scontent.xx.fbcdn.net/v/t1.0-9/18740742_1856104097972596_7232442169177972267_n.jpg?oh=ca3161a0b022b480ca3bb6597f5e2ae1&oe=59EA19EF">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1128,18 +1035,15 @@
       
         
           
-            <h1 id="Mathematics-Expression-Example"><a href="#Mathematics-Expression-Example" class="headerlink" title="Mathematics Expression Example"></a>Mathematics Expression Example</h1><h3 id="The-Lorenz-Equations"><a href="#The-Lorenz-Equations" class="headerlink" title="The Lorenz Equations"></a>The Lorenz Equations</h3><p>$$<br>\begin{aligned}<br>\dot{x} &amp; = \sigma(y-x) \\<br>\dot{y} &amp; = \rho x - y - xz \\<br>\dot{z} &amp; = -\beta z + xy<br>\end{aligned}<br>$$</p>
-<h3 id="The-Cauchy-Schwarz-Inequality"><a href="#The-Cauchy-Schwarz-Inequality" class="headerlink" title="The Cauchy-Schwarz Inequality"></a>The <em>Cauchy-Schwarz Inequality</em></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$$</div><div class="line"> \left( \sum_&#123;k=1&#125;^n a_k b_k \right)^2 \leq \left( \sum_&#123;k=1&#125;^n a_k^2 \right) \left( \sum_&#123;k=1&#125;^n b_k^2 \right)</div><div class="line">$$</div></pre></td></tr></table></figure>
-<p>$$<br> \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)<br>$$</p>
-<p>$$<br> ( \sum_{k=1}^n a_k b_k )^2 \leq ( \sum_{k=1}^n a_k^2 ) ( \sum_{k=1}^n b_k^2 )<br>$$</p>
-<h3 id="A-Cross-Product-Formula"><a href="#A-Cross-Product-Formula" class="headerlink" title="A Cross Product Formula"></a>A Cross Product Formula</h3><p>$$<br>\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\<br>\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\<br>\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0<br>\end{vmatrix}<br>$$</p>
-<h3 id="The-probability-of-getting-k-heads-when-flipping-n-coins-is"><a href="#The-probability-of-getting-k-heads-when-flipping-n-coins-is" class="headerlink" title="The probability of getting $k$ heads when flipping $n$ coins is"></a>The probability of getting $k$ heads when flipping $n$ coins is</h3><p>$$P(E)   = {n \choose k} p^k (1-p)^{ n-k}$$</p>
-<h3 id="An-Identity-of-Ramanujan"><a href="#An-Identity-of-Ramanujan" class="headerlink" title="An Identity of Ramanujan"></a>An Identity of Ramanujan</h3><p>$$<br>\frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} =<br>1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}}<br>{1+\frac{e^{-8\pi}} {1+\ldots} } } }<br>$$</p>
-<h3 id="A-Rogers-Ramanujan-Identity"><a href="#A-Rogers-Ramanujan-Identity" class="headerlink" title="A Rogers-Ramanujan Identity"></a>A Rogers-Ramanujan Identity</h3><p>$$<br>1 +  \frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots =<br>\prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})},<br>\quad\quad \text{for $|q|&lt;1$}.<br>$$</p>
-<h3 id="Maxwell’s-Equations"><a href="#Maxwell’s-Equations" class="headerlink" title="Maxwell’s Equations"></a>Maxwell’s Equations</h3><p>$$<br>  \begin{aligned}<br>\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \\   \nabla \cdot \vec{\mathbf{E}} &amp; = 4 \pi \rho \\<br>\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp; = \vec{\mathbf{0}} \\<br>\nabla \cdot \vec{\mathbf{B}} &amp; = 0 \end{aligned}<br>$$</p>
-<p>Finally, while display equations look good for a page of samples, the ability to mix math and text in a paragraph is also important. This expression $\sqrt{3x-1}+(1+x)^2$ is an example of an inline equation. As you see, MathJax equations can be used this way as well, without unduly disturbing the spacing between lines.</p>
-
-          
+          Mathematics Expression ExampleThe Lorenz Equations$$\begin{aligned}\dot{x} &amp; = \sigma(y-x) \\\dot{y} &amp; = \rho x - y - xz \\\dot{z} &amp; = -\b
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/24/mathjax-test/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1186,7 +1090,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Weinan Feng">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://scontent.xx.fbcdn.net/v/t1.0-9/18740742_1856104097972596_7232442169177972267_n.jpg?oh=ca3161a0b022b480ca3bb6597f5e2ae1&oe=59EA19EF">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1249,30 +1153,15 @@
       
         
           
-            <h2 id="1-GitHub账号及repository"><a href="#1-GitHub账号及repository" class="headerlink" title="1. GitHub账号及repository"></a>1. GitHub账号及repository</h2><p>首先你要有一个GitHub账号，如果没有可以很方便用邮箱<a href="https://github.com/join?source=header-home" target="_blank" rel="external">注册</a>。有了账号后需要创建一个仓库（repository），将仓库的名字命名为<code>username.github.io</code>这里的’username’一定是GitHub账号的用户名，<strong>字母要与用户名大小写相同</strong>。<br>例如，GitHub账户名为OptLab，我们的repository就是OptLab.github.io。</p>
-<h2 id="2-配置本机电脑的安装环境"><a href="#2-配置本机电脑的安装环境" class="headerlink" title="2. 配置本机电脑的安装环境"></a>2. 配置本机电脑的安装环境</h2><h3 id="2-1-安装Node"><a href="#2-1-安装Node" class="headerlink" title="2.1 安装Node"></a>2.1 安装Node</h3><p>作用：用来生成静态页面的 到Node.js<a href="https://nodejs.org/en/" target="_blank" rel="external">官网</a>下载相应平台的最新版本，一路安装即可。</p>
-<h3 id="2-2-安装Git"><a href="#2-2-安装Git" class="headerlink" title="2.2 安装Git"></a>2.2 安装Git</h3><p>作用：把本地的hexo内容提交到github上去。在<a href="https://git-scm.com/downloads" target="_blank" rel="external">官网</a>下载，一路安装即可。</p>
-<h2 id="3-正式安装Hexo"><a href="#3-正式安装Hexo" class="headerlink" title="3. 正式安装Hexo"></a>3. 正式安装Hexo</h2><p>Hexo的安装需要在Git Bash（安装Git后在桌面自动生成图标）中进行。</p>
-<h3 id="3-1-安装hexo"><a href="#3-1-安装hexo" class="headerlink" title="3.1 安装hexo"></a>3.1 安装hexo</h3><p><code>npm install -g hexo-cli</code></p>
-<h3 id="3-2-创建安装文件夹"><a href="#3-2-创建安装文件夹" class="headerlink" title="3.2 创建安装文件夹"></a>3.2 创建安装文件夹</h3><p>创建一个文件夹如c:hexo，并在bash中进入这个文件夹。<br><code>cd c:hexo</code></p>
-<h3 id="3-3-初始化博客"><a href="#3-3-初始化博客" class="headerlink" title="3.3 初始化博客"></a>3.3 初始化博客</h3><p><code>hexo init</code></p>
-<h3 id="3-4-配置博客"><a href="#3-4-配置博客" class="headerlink" title="3.4 配置博客"></a>3.4 配置博客</h3><p>我们对博客修改相应的配置，我们用到_config.yml文件。</p>
-<h4 id="修改网站信息"><a href="#修改网站信息" class="headerlink" title="修改网站信息"></a>修改网站信息</h4><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attr">title:</span> <span class="string">xxxxx</span></div><div class="line"><span class="attr">subtitle:</span> <span class="string">xxxx</span></div><div class="line"><span class="attr">description:</span> <span class="string">xxxx</span></div><div class="line"><span class="attr">author:</span> <span class="string">xxxx</span></div><div class="line"><span class="attr">language:</span> <span class="string">ja-JP</span></div><div class="line"><span class="attr">timezone:</span> <span class="string">Asia/Tokyo</span></div></pre></td></tr></table></figure>
-<p>language和timezone都是有输入规范的，详细可参考<a href="http://blog.csdn.net/hao95165/article/details/50730432" target="_blank" rel="external">语言规范</a>和<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank" rel="external">时区规范</a>。</p>
-<h4 id="3-4-1-网址设定"><a href="#3-4-1-网址设定" class="headerlink" title="3.4.1 网址设定"></a>3.4.1 网址设定</h4><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">url:</span> <span class="attr">http://username.github.io</span></div><div class="line"><span class="attr">root:</span> <span class="string">/</span></div></pre></td></tr></table></figure>
-<h4 id="3-4-2-部署配置"><a href="#3-4-2-部署配置" class="headerlink" title="3.4.2 部署配置"></a>3.4.2 部署配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:UserName/UserName.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-<h3 id="3-5-安装server"><a href="#3-5-安装server" class="headerlink" title="3.5 安装server"></a>3.5 安装server</h3><p><code>npm install hexo-server --save</code><br>还有一些其他配置，不做似乎也可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install hexo-renderer-ejs --save</div><div class="line">npm install hexo-renderer-stylus --save</div><div class="line">npm install hexo-renderer-marked --save</div></pre></td></tr></table></figure></p>
-<h3 id="3-5发表一篇文章"><a href="#3-5发表一篇文章" class="headerlink" title="3.5发表一篇文章"></a>3.5发表一篇文章</h3><p><code>hexo new &quot;title&quot;</code></p>
-<h3 id="3-6生成静态页面"><a href="#3-6生成静态页面" class="headerlink" title="3.6生成静态页面"></a>3.6生成静态页面</h3><p><code>hexo generate</code> or <code>hexo g</code></p>
-<h3 id="3-7-启动server"><a href="#3-7-启动server" class="headerlink" title="3.7 启动server"></a>3.7 启动server</h3><p><code>hexo server</code> or <code>hexo s</code><br>此时会显示<code>INFO  Start processing
-INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</code>但是有可能无法打开，这可能与代理服务器配置以及Proxifer的使用有关，建议检验此服务器前关闭代理，关闭proxifer。</p>
-<h3 id="3-8-安装deployer"><a href="#3-8-安装deployer" class="headerlink" title="3.8 安装deployer"></a>3.8 安装deployer</h3><p><code>npm install hexo-deployer-git --save</code><br>可能会出现一些错误，提示<br><code>git config --global user.email &quot;you@example.com&quot;</code><br><code>git config --global user.name &quot;Your Name&quot;</code></p>
-<h2 id="4-获得并添加秘钥"><a href="#4-获得并添加秘钥" class="headerlink" title="4 获得并添加秘钥"></a>4 获得并添加秘钥</h2><p>在bash中输入<code>ssh-keygen -t rsa -C &quot;Github的注册邮箱地址&quot;</code>来获取秘钥。<br>一路Enter过来就好，待秘钥生成完毕，会得到两个文件id_rsa和id_rsa.pub，用带格式的记事本打开id_rsa.pub，Ctrl + a复制里面的所有内容，然后进入<a href="https://github.com/settings/ssh：" target="_blank" rel="external">https://github.com/settings/ssh：</a> 将复制的内容粘贴到Key的输入框，随便写好Title里面的内容，点击Add SSH key按钮即可。</p>
-<h2 id="5-部署"><a href="#5-部署" class="headerlink" title="5 部署"></a>5 部署</h2><p>每次部署的步骤，可按以下三步来进行。<br><code>hexo clean</code><br><code>hexo generate</code> or <code>hexo g</code><br><code>hexo deploy</code> or <code>hexo d</code></p>
-<hr>
-<p>参考资料：<br><a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">20分钟教你使用hexo搭建github博客</a><br><a href="http://baixin.io/2015/08/HEXO搭建个人博客/" target="_blank" rel="external">HEXO搭建个人博客</a></p>
-
-          
+          1. GitHub账号及repository首先你要有一个GitHub账号，如果没有可以很方便用邮箱注册。有了账号后需要创建一个仓库（repository），将仓库的名字命名为username.github.io这里的’username’一定是GitHub账号的用户名，字母要与用户名大小写相同。例如
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/23/用hexo搭建GitHub博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1319,7 +1208,7 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</code>但
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Weinan Feng">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://scontent.xx.fbcdn.net/v/t1.0-9/18740742_1856104097972596_7232442169177972267_n.jpg?oh=ca3161a0b022b480ca3bb6597f5e2ae1&oe=59EA19EF">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1382,9 +1271,16 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</code>但
       
         
           
-            <p>欢迎来到我的博客！</p>
+          欢迎来到我的博客！
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/20/My-first-blog/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1450,7 +1346,7 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</code>但
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="https://scontent.xx.fbcdn.net/v/t1.0-9/18740742_1856104097972596_7232442169177972267_n.jpg?oh=ca3161a0b022b480ca3bb6597f5e2ae1&oe=59EA19EF"
                alt="Weinan Feng" />
           <p class="site-author-name" itemprop="name">Weinan Feng</p>
            
@@ -1475,7 +1371,7 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</code>但
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
